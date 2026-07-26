@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namaste DSA Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">⚡</div>
+        <h2>Namaste <span>DSA</span></h2>
+      </div>
+
+      <nav class="nav-menu" id="module-nav">
+        <!-- Module links generated dynamically -->
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="progress-container">
+          <div class="progress-info">
+            <span>Overall Progress</span>
+            <span id="overall-progress-pct">0%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="overall-progress-bar" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="top-header">
+        <div class="header-search">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" placeholder="Search topics, algorithms, problems...">
+        </div>
+        <div class="header-actions">
+          <span class="badge">Namaste JavaScript & DSA</span>
+        </div>
+      </header>
+
+      <!-- Dashboard View / Content Area -->
+      <div class="content-body">
+        <!-- Module Header -->
+        <section class="module-header-card" id="module-header-card">
+          <div class="module-header-info">
+            <span class="module-tag" id="module-tag">Module 1</span>
+            <h1 id="module-title">Getting Started & Fundamentals</h1>
+            <p id="module-desc">Core concepts, time & space complexity, big O notation, and fundamental problem-solving techniques.</p>
+          </div>
+        </section>
+
+        <!-- Topic Tabs & Content Area -->
+        <div class="topic-layout">
+          <!-- Topic List / Sub-nav -->
+          <div class="topic-sidebar">
+            <div class="section-title">TOPICS & LESSONS</div>
+            <div class="topic-list" id="topic-list">
+              <!-- Dynamically populated topics -->
+            </div>
+          </div>
+
+          <!-- Lesson Viewer -->
+          <div class="topic-main-view" id="lesson-view">
+            <!-- Active topic header -->
+            <div class="lesson-header">
+              <div>
+                <h2 id="lesson-title">Select a Topic</h2>
+                <div class="lesson-meta">
+                  <span id="lesson-difficulty" class="diff-badge diff-easy">Easy</span>
+                  <span id="lesson-time">⏱️ 15 mins</span>
+                </div>
+              </div>
+              <button class="btn-complete" id="mark-complete-btn">
+                <span>✓</span> Mark as Completed
+              </button>
+            </div>
+
+            <!-- Notes & Explanation -->
+            <div class="lesson-section">
+              <h3>💡 Concepts & Key Takeaways</h3>
+              <div id="lesson-notes" class="lesson-notes-content">
+                <p>Select a topic from the list to view notes, implementation, visualizer, and practice problems.</p>
+              </div>
+            </div>
+
+            <!-- Visualizer Section (Interactive canvas/animation) -->
+            <div class="lesson-section visualizer-section">
+              <div class="section-header-inline">
+                <h3>🎮 Interactive Visualizer</h3>
+                <div class="viz-controls" id="viz-controls">
+                  <!-- Visualizer specific controls loaded dynamically -->
+                </div>
+              </div>
+              <div class="viz-canvas-container" id="viz-canvas-container">
+                <div class="viz-placeholder" id="viz-placeholder">Visualizer ready. Click Start/Run to animate algorithms.</div>
+              </div>
+            </div>
+
+            <!-- Code Playground Section -->
+            <div class="lesson-section code-section">
+              <div class="section-header-inline">
+                <h3>💻 Code Playground (JavaScript)</h3>
+                <div class="code-actions">
+                  <button class="btn-sm btn-secondary" id="reset-code-btn">Reset</button>
+                  <button class="btn-sm btn-primary" id="run-code-btn">▶ Run Code</button>
+                </div>
+              </div>
+              <div class="code-editor-container">
+                <textarea id="code-editor" spellcheck="false" autocomplete="off"></textarea>
+              </div>
+              <div class="console-output-container">
+                <div class="console-header">Console Output</div>
+                <pre id="console-output">// Output will appear here after execution...</pre>
+              </div>
+            </div>
+
+            <!-- Practice Problems -->
+            <div class="lesson-section">
+              <h3>🎯 Practice Problems</h3>
+              <ul class="problem-list" id="problem-list">
+                <!-- Dynamically populated practice problems -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="visualizer.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

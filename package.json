@@ -1,0 +1,12 @@
+{
+  "name": "namaste-dsa-js",
+  "version": "1.0.0",
+  "description": "DSA learning in JavaScript — Namaste DSA by Akshay Saini",
+  "main": "index.js",
+  "scripts": {
+    "run": "node"
+  },
+  "keywords": ["dsa", "javascript", "algorithms", "data-structures"],
+  "author": "",
+  "license": "ISC"
+}
