@@ -1,27 +1,17 @@
-﻿/**
- * Problem: Palindrome
- * Module:  02 - Warm Up
- *
- * Description:
- * Check if a string or number is a palindrome.
- *
- * Example:
- *   Input:
- *   Output:
- *
- * Time Complexity:  O()
- * Space Complexity: O()
- */
+﻿
 
-// ─────────────────────────────────────────
-// Solution
-// ─────────────────────────────────────────
+function isPalindrom(n) {
+  let r = 0, original = n;
 
-function solution() {
-  // your code here
+  while (n != 0) {
+    let t = n % 10;
+    r = (r * 10) + t;
+
+    n = (n / 10) | 0;
+  }
+
+  return original == r;
 }
 
-// ─────────────────────────────────────────
-// Test / Run
-// ─────────────────────────────────────────
-console.log(solution());
+let num = 12231;
+console.log(isPalindrom(num));
