@@ -1,27 +1,17 @@
-﻿/**
- * Problem: Count Digit
- * Module:  02 - Warm Up
- *
- * Description:
- * Count the number of digits in an integer.
- *
- * Example:
- *   Input:
- *   Output:
- *
- * Time Complexity:  O()
- * Space Complexity: O()
- */
+﻿
 
-// ─────────────────────────────────────────
-// Solution
-// ─────────────────────────────────────────
+function countDigits(n) {
+  if (n == 0) return 1;
+  n = Math.abs(n);
 
-function solution() {
-  // your code here
+  let counter = 0;
+  while (n > 0) {
+    n = (n / 10) | 0;
+    console.log(n);
+    counter++;
+  }
+  return counter;
 }
 
-// ─────────────────────────────────────────
-// Test / Run
-// ─────────────────────────────────────────
-console.log(solution());
+let number = -982;
+console.log("Digits : " + countDigits(number));

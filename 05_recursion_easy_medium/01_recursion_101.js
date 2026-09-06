@@ -1,27 +1,23 @@
-﻿/**
- * Problem: Recursion 101
- * Module:  05 - Recursion Easy/Medium
- *
- * Description:
- * Understand the basics of recursion with clear explanations and examples.
- *
- * Example:
- *   Input:
- *   Output:
- *
- * Time Complexity:  O()
- * Space Complexity: O()
- */
+﻿
 
-// ─────────────────────────────────────────
-// Solution
-// ─────────────────────────────────────────
+function fun(num) {
+  if (num === 0) return;
+  console.log(num);
+  num -= 1;
 
-function solution() {
-  // your code here
+  fun(num);
 }
 
-// ─────────────────────────────────────────
-// Test / Run
-// ─────────────────────────────────────────
-console.log(solution());
+let count = 0;
+function oneToN(num) {
+  if (count == num) return;
+  console.log(count + 1);
+  count++;
+
+
+  oneToN(num);
+}
+
+let n = 10;
+// fun(n);
+oneToN(n);
